@@ -68,6 +68,8 @@ end)
 
 Citizen.CreateThread(function()
     while true do
+        collectgarbage() --release memory
+		
         Citizen.Wait(config.client_update_interval)
 
         -- pre-format the data to use it
